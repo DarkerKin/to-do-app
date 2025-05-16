@@ -1,0 +1,75 @@
+
+:root{
+    --login-container-color: #E6E5E5;
+    --login-button: #E54040;
+}
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100vh;
+    align-items: center;
+}
+
+
+.login-container{
+    background-color: var(--login-container-color);
+    padding: 1rem;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    flex-grow: 0.1;
+    flex-shrink: 1;
+}
+.login-container h2{
+    text-align: center;
+    font-weight: 100;
+    margin: 0;
+    font-size: 1.5rem;
+}
+.login-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.login-container form button{
+    background-color: var(--login-button);
+    border: none;
+    color: #ffffff;
+    font-size: large;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    margin-top: 0.5rem;
+}
+
+.login-container a{
+    color: var(--login-button);
+}
+
+.login-container form input{
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 2px;
+
+}
+.login-container form label{
+    margin-top: 1rem;
+    margin-left:0.3rem;
+    margin-bottom: 0.2rem;
+}
+.login-container p{
+    font-size: small;
+    text-align: center;
+}
+input:focus{
+    outline: 0.5px red solid;
+
+}
+
+.login-page-header h1{
+    animation: fadeInUp 0.5s ease-out forwards; 
+}

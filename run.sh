@@ -8,11 +8,11 @@ sleep 2
 
 # Open the URL in the default browser (cross-platform handling)
 if which xdg-open > /dev/null; then
-  xdg-open http://localhost:5173/
+  xdg-open http://localhost:5600/
 elif which open > /dev/null; then
-  open http://localhost:5173/
+  open http://localhost:5600/
 elif which start > /dev/null; then
-  start http://localhost:5173/
+  start http://localhost:5600/
 else
-  echo "Please open http://localhost:5173/ manually in your browser"
+  echo "Please open http://localhost:5600/ manually in your browser"
 fi
