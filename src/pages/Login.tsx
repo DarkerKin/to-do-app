@@ -1,12 +1,14 @@
-import { useState, type ChangeEvent, type ChangeEventHandler, type FormEvent, type FormEventHandler } from 'react'
+import { useState, type FormEvent } from 'react'
 import './styles/loginOrRegister.css'
+import { useNavigate } from 'react-router-dom';
 
 
 
 
-function LoginOrRegister() {
+function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigator = useNavigate();
 
     const handleEmailChange = (event: any) => {
         setEmail(event.target.value);
@@ -18,6 +20,9 @@ function LoginOrRegister() {
     const handleSubmit= (event: FormEvent) =>{
         event.preventDefault();
         console.log(email, password);
+    }
+    const goToRegisterPage = () => {
+        navigator('/register')
     }
 
     return (
@@ -35,11 +40,11 @@ function LoginOrRegister() {
                     <input type="password" placeholder='password' onChange={handlePasswordChange} id="user-password" required/>
                     <button type="submit">Login</button>
                 </form>
-                <p>Don't have an account? <a href="./login.html">Create an account.</a></p>
+                <p>Don't have an account? <a onClick={goToRegisterPage}>Create an account.</a></p>
             </div>
         </div>
         </>
     )
 }
 
-export default LoginOrRegister;
+export default Login;
