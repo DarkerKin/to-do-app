@@ -4,13 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do App</title>
-    <linkrm 
+    <link rel="stylesheet" href="to-do-app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <main>
         <div class="root">
-            <h2>To Do Application</h2>
-
+            <div class="intro">
+                <h1>To Do Application</h1>
+                <div class="intro-add-btn-and-greetings">
+                    <h2>Hi {username},</h2>
+                    <div class="add-btn"><i class="fa-solid fa-plus"></i></div>
+                </div>
+            </div>
+            <div>
+                <div class="tasks adding-task">
+                    <input type="text" maxlength="300"/>
+                    <div class="task-btns">
+                        <div class="task-btn"><i class="fa-solid fa-eye-dropper"></i></div>
+                        <div class="task-btn"><i class="fa-solid fa-trash-can"></i></div>
+                    </div>
+                </div>
+                <div class="tasks">
+                    <h4>Task 2</h4>
+                    <div class="task-btns">
+                        <div class="task-btn"><i class="fa-solid fa-check done"></i></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </body>

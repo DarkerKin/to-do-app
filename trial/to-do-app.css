@@ -1,3 +1,100 @@
 *{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: sans-serif;
+    margin: 2rem 1rem;
+}
+.intro h2{
+    font-weight: lighter;
+    filter:contrast(20%);
+
+}
+.add-btn{
+    background-color: rgb(208, 206, 206);
+    border-radius: 100%;
+    width: 1rem;
+    height: 1rem;
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.add-btn i {
+    margin: 0;
+    height: auto;
+    width: auto;
+}
+
+.intro-add-btn-and-greetings{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro-add-btn-and-greetings,.intro-add-btn-and-greetings h2,.intro-add-btn-and-greetings .add-btn{
+    margin: 0.8rem;
+}
+
+
+
+.tasks{
+    background-color: rgb(33, 8, 8);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.tasks h4{
+    margin: 0;
+}
+
+.task-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0;
+}
+
+.task-btn{
+    background-color: rgba(208, 206, 206,70%);
+    border-radius: 100%;
+    width: 1rem;
+    height: 1rem;
+    padding: 0.7rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.task-btn i{
+    margin: 0;
+    color: rgba(54, 51, 51,30%);
+}
+
+
+.adding-task .task-btn i{
+    color: black;
+}
+.done:hover{
+    color: black;
+}
+
+
+.adding-task input{
+    margin: 0;
+    font-size: 1em;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    width: 90%;
+    border: none;
+}
+
+.adding-task input:focus{
+    outline: none;
 }
