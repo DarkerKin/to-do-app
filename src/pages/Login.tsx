@@ -1,13 +1,20 @@
 import { useState, type FormEvent } from 'react'
+  import { createClient } from '@supabase/supabase-js'
+  import { Auth } from '@supabase/auth-ui-react'
 import './styles/loginOrRegister.css'
 import { useNavigate } from 'react-router-dom';
 
 
 
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL!;
+const supabaseKey= import.meta.env.VITE_SUPABASE_KEY!;
+
+const supabase = createClient(supabaseUrl, supabaseKey);
+
 
 function Login() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [userEmail, setEmail] = useState('');
+    const [userPassword, setPassword] = useState('');
     const navigator = useNavigate();
 
     const handleEmailChange = (event: any) => {
@@ -19,7 +26,22 @@ function Login() {
     };
     const handleSubmit= (event: FormEvent) =>{
         event.preventDefault();
-        console.log(email, password);
+        console.log(userEmail, userPassword);
+        async function signUpNewUser() {
+            const { data, error } = await supabase.auth.signInWithPassword({
+                email: userEmail,
+                password: userPassword,
+            });
+            console.log(data);
+            console.log(error);
+            if(error === null){
+                console.log('meow');
+                
+                navigator('/home');
+            }
+        }
+        signUpNewUser();
+
     }
     const goToRegisterPage = () => {
         navigator('/register')
