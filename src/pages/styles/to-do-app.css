@@ -1,3 +1,6 @@
+:root{
+    --o-animation-delay: 3s;
+}
 *{
     font-family: sans-serif;
     margin: 2rem 1rem;
@@ -97,4 +100,14 @@
 
 .adding-task input:focus{
     outline: none;
+}
+
+.rotate{
+    transform: rotate(45deg);
+    transition: transform var(--o-animation-delay) ease-in-out;
+}
+
+.hidden{
+    
+    display: none;
 }
